@@ -1,0 +1,39 @@
+#mybatis:
+#  configuration:
+#    #开启mybatis驼峰式命名规则自动转换
+#    map-underscore-to-camel-case: true
+#  mapper-locations: com/redis/test_redis/mapper/**/*.xml
+#  type-aliases-package: com.redis.test_redis.domain
+
+
+
+#  mapper-locations:
+#  mapper-locations:
+#    classpath: mapper/*Mapper.xml
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/redis
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  freemarker:
+    charset: UTF-8
+server:
+  port: 8990
+
+
+#logging:
+#  level:
+#    org.springframework: info
+#    com.ylee.house_server.mapper: debug
+  #spring模板字符集
+#spring:
+#  freemarker:
+#    charset: UTF-8
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.redis.test_redis.domain classpath:com/redis/test_redis/mapper/**/*.xml
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  config-location: classpath:application.yml

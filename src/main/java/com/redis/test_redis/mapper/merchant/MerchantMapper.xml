@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.redis.test_redis.mapper.merchant.MerchantMapper">
+    <resultMap id="BaseResultMap" type="com.redis.test_redis.domain.entity.MerchantEntity">
+        <id column="id"  property="id"/>
+        <result column="password"  property="password"/>
+        <result column="salt"  property="salt"/>
+        <result column="account_name" jdbcType="VARCHAR" property="accountName"/>
+        <result column="company_type" jdbcType="VARCHAR" property="companyType"/>
+        <result column="company_name" jdbcType="VARCHAR" property="companyName"/>
+        <result column="company_nature" jdbcType="VARCHAR" property="companyNature"/>
+        <result column="register_capital" jdbcType="VARCHAR" property="registerCapital"/>
+        <result column="register_currency" jdbcType="VARCHAR" property="registerCurrency"/>
+        <result column="listed_situation" jdbcType="VARCHAR" property="listedSituation"/>
+        <result column="is_branch_company" jdbcType="VARCHAR" property="isBranchCompany"/>
+        <result column="is_three_certificates" jdbcType="VARCHAR" property="isThreeCertificates"/>
+        <result column="bank_account_evidence" jdbcType="VARCHAR" property="bankAccountEvidence"/>
+        <result column="company_commitment_letter" jdbcType="VARCHAR" property="companyCommitmentLetter"/>
+        <result column="apid" jdbcType="VARCHAR" property="apid"/>
+        <result column="ap_name" jdbcType="VARCHAR" property="apName"/>
+        <result column="contact_name" jdbcType="VARCHAR" property="contactName"/>
+        <result column="contact_phone" jdbcType="VARCHAR" property="contactPhone"/>
+        <result column="contact_id_card" jdbcType="VARCHAR" property="contactIdCard"/>
+        <result column="contact_email" jdbcType="VARCHAR" property="contactEmail"/>
+        <result column="credit_code" jdbcType="VARCHAR" property="creditCode"/>
+        <result column="business_license" jdbcType="VARCHAR" property="businessLicense"/>
+        <result column="valid_start_date" jdbcType="TIMESTAMP" property="validStartDate"/>
+        <result column="valid_end_date" jdbcType="TIMESTAMP" property="validEndDate"/>
+        <result column="taxpayer_type" jdbcType="VARCHAR" property="taxpayerType"/>
+        <result column="taxpayer_certification" jdbcType="VARCHAR" property="taxpayerCertification"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+        <result column="logic_delete" jdbcType="BOOLEAN" property="logicDelete"/>
+        <result column="dept_id" jdbcType="VARCHAR" property="deptId"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="issue_flow_id" jdbcType="VARCHAR" property="issueFlowId"/>
+        <result column="contact_id_card_status" property="contactIdCardStatus"/>
+        <result column="company_status" property="companyStatus"/>
+        <result column="legal_person_name" property="legalPersonName"/>
+        <result column="legal_person_cert_id" property="legalPersonCertId"/>
+        <result column="authorization_granted_name" property="authorizationGrantedName"/>
+        <result column="legal_person_id_card_copy" property="legalPersonIdCardCopy"/>
+        <result column="authorization_granted_id_card_copy" property="authorizationGrantedIdCardCopy"/>
+        <result column="contract_sign" property="contractSign"/>
+        <result column="open_account" property="openAccount"/>
+        <result column="head_office" property="headOffice"/>
+        <result column="legal_person_authorization" property="legalPersonAuthorization"/>
+        <result column="longterm" property="longTerm"/>
+        <result column="belong_dealer" property="belongDealer"/>
+        <result column="integrated_customer" property="integratedCustomer"/>
+        <result column="cooperative_product" property="cooperativeProduct"/>
+        <result column="qualification_source" property="qualificationSource"/>
+    </resultMap>
+    <select id="selectByMerchantId"  parameterType="com.redis.test_redis.domain.entity.MerchantEntity" resultMap="BaseResultMap">
+        select * from sim_merchant
+        where logic_delete = 0 and id = #{id}
+    </select>
+
+</mapper>
